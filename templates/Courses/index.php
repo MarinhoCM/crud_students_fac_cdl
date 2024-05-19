@@ -5,8 +5,8 @@
  */
 ?>
 <div class="courses index content">
-    <?= $this->Html->link(__('New Course'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Courses') ?></h3>
+    <?= $this->Html->link(__('New Course'), ['action' => 'add'], ['class' => 'btn btn-primary btn-custom float-right']) ?>
+    <h2><?= __('Courses') ?></h2>
     <div class="table-responsive">
         <table>
             <thead>
@@ -24,7 +24,6 @@
                     <td><?= h($course->course_name) ?></td>
                     <td><?= $course->credits === null ? '' : $this->Number->format($course->credits) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $course->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $course->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $course->id], ['confirm' => __('Are you sure you want to delete # {0}?', $course->id)]) ?>
                     </td>
@@ -44,3 +43,9 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+
+<style>
+    .btn-custom {
+        font-size: 18px;
+    }
+</style>

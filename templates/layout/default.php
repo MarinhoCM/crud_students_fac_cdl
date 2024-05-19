@@ -13,8 +13,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
+// default.php
+$cakeDescription = 'Royal Britannia University';
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake']) ?>
+    <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake', 'bootstrap.min']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -36,11 +36,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <a href="<?= $this->Url->build('/') ?>"><span>Royal</span> Britannia</a>
         </div>
     </nav>
     <main class="main">

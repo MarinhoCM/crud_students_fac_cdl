@@ -5,7 +5,7 @@
  */
 ?>
 <div class="teachers index content">
-    <?= $this->Html->link(__('New Teacher'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Teacher'), ['action' => 'add'], ['class' => 'btn btn-primary btn-custom float-right']) ?><br>
     <h3><?= __('Teachers') ?></h3>
     <div class="table-responsive">
         <table>
@@ -22,19 +22,19 @@
             </thead>
             <tbody>
                 <?php foreach ($teachers as $teacher): ?>
-                <tr>
-                    <td><?= $this->Number->format($teacher->id) ?></td>
-                    <td><?= h($teacher->first_name) ?></td>
-                    <td><?= h($teacher->last_name) ?></td>
-                    <td><?= h($teacher->email) ?></td>
-                    <td><?= h($teacher->phone) ?></td>
-                    <td><?= h($teacher->department) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $teacher->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $teacher->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $teacher->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teacher->id)]) ?>
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?= $this->Number->format($teacher->id) ?></td>
+                        <td><?= h($teacher->first_name) ?></td>
+                        <td><?= h($teacher->last_name) ?></td>
+                        <td><?= h($teacher->email) ?></td>
+                        <td><?= h($teacher->phone) ?></td>
+                        <td><?= h($teacher->department) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $teacher->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $teacher->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $teacher->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teacher->id)]) ?>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
@@ -47,6 +47,14 @@
             <?= $this->Paginator->next(__('next') . ' >') ?>
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?>
+        </p>
     </div>
 </div>
+
+
+<style>
+    .btn-custom {
+        font-size: 18px;
+    }
+</style>

@@ -5,7 +5,7 @@
  */
 ?>
 <div class="students index content">
-    <?= $this->Html->link(__('New Student'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Student'), ['action' => 'add'], ['class' => 'btn btn-primary btn-custom float-right']) ?><br>
     <h3><?= __('Students') ?></h3>
     <div class="table-responsive">
         <table>
@@ -52,3 +52,9 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+
+<style>
+    .btn-custom {
+        font-size: 18px;
+    }
+</style>

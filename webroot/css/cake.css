@@ -5,8 +5,12 @@ body {
 }
 
 .top-nav-links,
+.side-nav h1 {
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 25px;
+}
 .side-nav,
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }
 
@@ -45,6 +49,7 @@ th a,
 
 /* Utility */
 .table-responsive {
+    font-size: 16px;
     display: block;
     width: 100%;
     overflow-x: auto;
@@ -85,7 +90,7 @@ th {
 }
 .top-nav-title a {
     font-size: 2.4rem;
-    color: #d33c43;
+    color: #0404a0;
 }
 .top-nav-title span {
     color: #404041;
@@ -168,6 +173,7 @@ th {
 
 /* Paginator */
 .paginator {
+    font-size: 16px;
     text-align: right;
 }
 .pagination {
